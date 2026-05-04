@@ -2,7 +2,7 @@
 
 **// NOTE THAT THIS IS A CLONE FOR AN ASSIGNMENT! NOT PHISHING**
 
-This backend is a complete Node.js + Express + MongoDB API implementation for the interim assessment.  
+This backend is a complete Node.js + Express + MongoDB API implementation for my DCIT 323 interim assessment.  
 It follows a clean `models / controllers / routes / middleware` architecture and exposes all required REST endpoints for frontend integration.
 
 ## Tech Stack
@@ -106,9 +106,9 @@ Register body or query parameters:
 
 ```json
 {
-	"name": "Ada Lovelace",
-	"email": "ada@example.com",
-	"password": "securepass123"
+	"name": "Sigmund Freud",
+	"email": "psycho@fraud.com",
+	"password": "securepassword123"
 }
 ```
 
@@ -116,8 +116,8 @@ Login body or query parameters:
 
 ```json
 {
-	"email": "ada@example.com",
-	"password": "securepass123"
+	"email": "psycho@fraud.com",
+	"password": "securepassword123"
 }
 ```
 
@@ -163,47 +163,3 @@ Create crypto request body:
 }
 ```
 
-## Frontend Integration Notes
-
-- Set frontend API base URL to the deployed backend URL or `http://localhost:5000/api` locally.
-- Enable `credentials: "include"` in frontend requests when using cookie auth.
-- Protect frontend profile route by checking auth state and redirecting unauthenticated users to login.
-
-## Rubric Checklist
-
-### 1) Authentication System (JWT-Based)
-
-- [x] Register endpoint implemented (`GET/POST /register`)
-- [x] Accepts name, email, password
-- [x] Password is hashed before storing
-- [x] User persisted to MongoDB
-- [x] Clear success and validation/error responses
-- [x] Login endpoint implemented (`GET/POST /login`)
-- [x] Validates email/password credentials
-- [x] Returns JWT and sets HTTP-only cookie
-
-### 2) Protected User Profile Page Support
-
-- [x] Protected profile endpoint implemented (`GET /profile`)
-- [x] JWT verification middleware implemented
-- [x] Unauthorized access returns `401`
-- [x] Authenticated response includes user name and email
-
-### 3) Crypto Data Integration
-
-- [x] `GET /crypto` implemented
-- [x] `GET /crypto/gainers` implemented with descending sort on 24h change
-- [x] `GET /crypto/new` implemented with newest-first sorting
-- [x] `POST /crypto` implemented
-- [x] Accepts name, symbol, price, image, change24h
-- [x] Stores crypto assets in MongoDB
-- [x] Returns clear success and error responses
-
-### 4) Backend Quality and Structure
-
-- [x] Node.js + MongoDB used
-- [x] Mongoose schemas and models created
-- [x] Controllers, routes, middleware are separated
-- [x] Centralized error handling added
-- [x] Environment-based configuration added
-- [x] Ready for deployment on Render or similar platforms
